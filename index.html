@@ -374,6 +374,28 @@
             animation: fadeUp 1s ease forwards 1.3s;
         }
 
+        .hero-video {
+            position: relative;
+            width: 100%;
+            max-width: 760px;
+            aspect-ratio: 16 / 9;
+            margin: 0 auto 40px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            background: #000;
+            box-shadow: 0 30px 80px -20px rgba(139,92,246,0.35);
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 1.4s;
+        }
+        .hero-video iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         .hero-cta {
             display: inline-flex;
             align-items: center;
@@ -714,10 +736,6 @@
             overflow: hidden;
             border: 1px solid var(--glass-border);
             background: var(--glass-bg);
-        }
-        .vid-featured {
-            max-width: 900px;
-            margin: 0 auto 24px;
         }
         .vid-frame {
             position: relative;
@@ -1927,6 +1945,9 @@
             19 מודולי ליבה. 375+ שיעורים. 50+ שעות תוכן.
             מ-0 לרעיון, לפיתוח ולמוצר חי — ומהדולר הראשון בדרך למיליון. גם בלי רקע בתכנות.
         </p>
+        <div class="hero-video">
+            <iframe src="https://drive.google.com/file/d/1Z-9dfI0SfMrqLk6-GEVgQ4qUZexK_l4-/preview" allow="autoplay; fullscreen" allowfullscreen title="מאשאפ עדויות nCode"></iframe>
+        </div>
         <a href="#roadmap" class="hero-cta">
             גלה את המסלול המלא
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -2939,15 +2960,7 @@
 
         <div class="vid-gallery-header reveal">
             <h3>הם מספרים את זה בעצמם.</h3>
-            <p>פחות משתי דקות של עדויות — ואחריהן ארבעה סיפורים מלאים</p>
-        </div>
-        <div class="vid-card vid-featured reveal">
-            <div class="vid-frame">
-                <iframe loading="lazy" src="https://drive.google.com/file/d/1Z-9dfI0SfMrqLk6-GEVgQ4qUZexK_l4-/preview" allow="autoplay; fullscreen" allowfullscreen title="מאשאפ עדויות nCode"></iframe>
-            </div>
-            <div class="vid-meta">
-                <div class="vid-name">סטודנטים של nCode במילים שלהם</div>
-            </div>
+            <p>ארבעה סטודנטים, ארבע נקודות פתיחה שונות — ותוצאה אמיתית בכל אחת</p>
         </div>
         <div class="vid-gallery">
             <div class="vid-card reveal">
