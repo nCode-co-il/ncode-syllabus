@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nCode | הסילבוס המלא — מ-0 ל-SaaS רווחי</title>
+<meta name="description" content="המסלול המלא להקמת עסק SaaS עם AI: 19 מודולי ליבה, 375+ שיעורים, מנטורים 1:1 בזום וקהילה פעילה. גם בלי רקע בתכנות.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="nCode | הסילבוס המלא — מ-0 ל-SaaS רווחי">
+<meta property="og:description" content="המסלול, המנטורים והעדויות — הכול במקום אחד.">
+<meta property="og:image" content="https://ncode-co-il.github.io/ncode-syllabus/images/videos/mashup.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080810'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='%238b5cf6'%3En%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07070d;
+  --surface: #0d0d17;
+  --card: #11111c;
+  --card-hover: #161624;
+  --line: rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.16);
+  --text: #eef0fb;
+  --muted: #9aa2b8;
+  --faint: #636b82;
+  --purple: #8b5cf6;
+  --purple-soft: rgba(139,92,246,0.14);
+  --cyan: #06b6d4;
+  --pink: #ec4899;
+  --green: #25d366;
+  --grad: linear-gradient(100deg, #a78bfa 0%, #22d3ee 55%, #f472b6 100%);
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --wrap: 1120px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Heebo', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.en { font-family: 'Inter', 'Heebo', sans-serif; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+section { padding: 96px 0; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 700; color: #c4b5fd;
+  letter-spacing: 0.02em; margin-bottom: 14px;
+}
+.eyebrow::before { content: ''; width: 18px; height: 2px; border-radius: 2px; background: var(--purple); }
+h2.title { text-wrap: balance; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.15; font-weight: 900; letter-spacing: -0.01em; }
+.lead { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); max-width: 640px; margin-top: 14px; }
+.head { margin-bottom: 44px; }
+.head.center { text-align: center; }
+.head.center .lead { margin-inline: auto; }
+
+/* reveal */
+.rv { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.rv.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* ---------- header ---------- */
+.top {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(7,7,13,0.78);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.top-in { display: flex; align-items: center; gap: 24px; height: 64px; }
+.logo { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: -0.02em; }
+.logo span { color: var(--purple); }
+.nav { display: flex; gap: 4px; margin-inline-start: 12px; }
+.nav a { font-size: 15px; font-weight: 600; color: var(--muted); padding: 8px 12px; border-radius: 999px; transition: color .2s, background .2s; }
+.nav a:hover, .nav a.cur { color: var(--text); background: rgba(255,255,255,0.06); }
+.top .btn { margin-inline-start: auto; }
+@media (max-width: 820px) { .nav { display: none; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-weight: 800; font-size: 16px; line-height: 1;
+  padding: 14px 22px; border-radius: 999px;
+  transition: transform .2s var(--ease), box-shadow .2s, background .2s;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.98); }
+.btn-wa { background: var(--green); color: #06270f; }
+.btn-wa:hover { box-shadow: 0 8px 28px rgba(37,211,102,0.35); transform: translateY(-1px); }
+.btn-ghost { border: 1px solid var(--line-strong); color: var(--text); }
+.btn-ghost:hover { background: rgba(255,255,255,0.06); }
+.btn-sm { padding: 10px 16px; font-size: 14px; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* ---------- hero ---------- */
+.hero { padding: 64px 0 40px; position: relative; }
+.hero::before {
+  content: ''; position: absolute; inset: -120px 0 auto; height: 640px; z-index: -1;
+  background:
+    radial-gradient(600px 320px at 75% 20%, rgba(139,92,246,0.22), transparent 70%),
+    radial-gradient(520px 300px at 20% 40%, rgba(6,182,212,0.12), transparent 70%);
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+.greet {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--line);
+  padding: 7px 14px 7px 16px; border-radius: 999px;
+  font-size: 14px; font-weight: 600; color: #d8dcf0; margin-bottom: 22px;
+}
+.greet i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(37,211,102,0.18); flex: none; }
+.hero h1 { text-wrap: balance; font-size: clamp(34px, 4.9vw, 58px); line-height: 1.08; font-weight: 900; letter-spacing: -0.02em; }
+.hero p.sub { color: var(--muted); font-size: clamp(17px, 1.8vw, 20px); margin-top: 18px; max-width: 520px; }
+.stats { display: grid; grid-template-columns: repeat(4, auto); gap: 10px 28px; margin-top: 30px; justify-content: start; }
+.stat b { display: block; direction: ltr; text-align: right; unicode-bidi: isolate; font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; line-height: 1.1; }
+.stat span { font-size: 14px; color: var(--muted); }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+@media (max-width: 920px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding-top: 40px; }
+}
+@media (max-width: 600px) {
+  .stats { grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 22px; }
+  .stat b { font-size: 20px; }
+  .stat span { font-size: 12.5px; line-height: 1.3; display: block; }
+  .hero-cta { display: none; }
+  .hero { padding-bottom: 28px; }
+  .hero-grid { gap: 26px; }
+  .hero .play { width: 60px; height: 60px; }
+  .hero .poster .cap b { font-size: 15.5px; }
+  .hero .poster .cap span { display: none; }
+  .greet { font-size: 13px; margin-bottom: 16px; }
+}
+
+/* video poster (shared) */
+.poster {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 16 / 9; border-radius: var(--r-lg); overflow: hidden;
+  background: #000; border: 1px solid var(--line);
+  cursor: pointer; isolation: isolate;
+}
+.poster img { width: 100%; height: 128%; object-fit: cover; object-position: center top; transition: transform .8s var(--ease), opacity .3s; }
+.poster:hover img { transform: scale(1.03); }
+.poster::after {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0) 55%);
+}
+.play {
+  position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,255,255,0.95); color: #0b0b12;
+  display: grid; place-items: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+  transition: transform .25s var(--ease);
+}
+.poster:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+.play svg { width: 24px; height: 24px; margin-left: 4px; }
+.poster .cap { position: absolute; z-index: 2; inset: auto 18px 16px 18px; text-align: right; }
+.poster .cap b { display: block; font-size: 17px; font-weight: 800; line-height: 1.3; }
+.poster .cap span { font-size: 14px; color: #cfd3e6; }
+.poster .dur {
+  position: absolute; z-index: 2; top: 14px; right: 14px;
+  font: 700 12px 'Inter', sans-serif; background: rgba(0,0,0,0.6); padding: 4px 9px; border-radius: 999px;
+}
+.hero .poster { box-shadow: 0 30px 80px -20px rgba(139,92,246,0.35); }
+.hero .play { width: 78px; height: 78px; }
+.hero .poster .cap b { font-size: 20px; }
+
+/* proof strip */
+.strip { border-block: 1px solid var(--line); background: var(--surface); padding: 0; overflow: hidden; }
+.strip-track { display: flex; gap: 48px; padding: 20px 0; width: max-content; animation: marquee 48s linear infinite; }
+.strip:hover .strip-track { animation-play-state: paused; }
+.strip-item { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; }
+.strip-item b { font: 800 20px 'Inter', 'Heebo', sans-serif; }
+.strip-item span { color: var(--muted); font-size: 15px; }
+.strip-item::after { content: '•'; color: var(--faint); margin-inline-start: 38px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(50%); } }
+@media (prefers-reduced-motion: reduce) { .strip-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } }
+
+/* ---------- roadmap ---------- */
+.phases { display: grid; gap: 18px; }
+.phase {
+  display: grid; grid-template-columns: 250px 1fr; gap: 28px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 28px;
+}
+.phase-tag { font: 800 12px 'Inter', sans-serif; letter-spacing: 0.14em; color: var(--purple); }
+.phase h3 { font-size: 22px; font-weight: 800; line-height: 1.3; margin-top: 6px; }
+.phase .phase-sub { color: var(--muted); font-size: 15px; margin-top: 6px; }
+.mods { display: grid; gap: 8px; }
+.mod { border: 1px solid var(--line); border-radius: var(--r-md); background: rgba(255,255,255,0.015); transition: border-color .2s, background .2s; }
+.mod:hover { border-color: var(--line-strong); }
+.mod.open { background: rgba(139,92,246,0.06); border-color: rgba(139,92,246,0.35); }
+.mod-h { width: 100%; display: flex; align-items: center; gap: 14px; padding: 14px 16px; text-align: right; }
+.mod-n { font: 800 14px 'Inter', sans-serif; color: var(--faint); width: 26px; flex: none; }
+.mod.open .mod-n { color: var(--purple); }
+.mod-t { flex: 1; min-width: 0; }
+.mod-t b { display: block; font-size: 17px; font-weight: 700; line-height: 1.35; }
+.mod-t small { font-size: 13.5px; color: var(--muted); }
+.avs { display: flex; flex: none; }
+.avs img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; border: 2px solid var(--card); margin-inline-start: -8px; background: #222; }
+.avs img:first-child { margin-inline-start: 0; }
+.avs em { font-style: normal; font: 700 11px 'Inter', sans-serif; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: #26263a; border: 2px solid var(--card); margin-inline-start: -8px; }
+.chev { width: 20px; height: 20px; color: var(--faint); transition: transform .3s var(--ease); flex: none; }
+.mod.open .chev { transform: rotate(180deg); color: var(--purple); }
+.mod-b { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--ease); }
+.mod.open .mod-b { grid-template-rows: 1fr; }
+.mod-b > div { overflow: hidden; }
+.mod-in { padding: 0 56px 18px 16px; }
+.hook { font-weight: 700; color: #ddd6fe; margin-bottom: 6px; }
+.mod-in p { color: #c3c8da; font-size: 15.5px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.chip { font-size: 13px; font-weight: 600; color: #cfd3e6; background: rgba(255,255,255,0.05); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; }
+.by { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+.by b { color: var(--text); font-weight: 600; }
+.path-tools { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+.path-tools .note { color: var(--muted); font-size: 15px; }
+@media (max-width: 860px) {
+  .phase { grid-template-columns: 1fr; gap: 16px; padding: 20px 16px; }
+  .mod-in { padding: 0 16px 16px; }
+  .avs { display: none; }
+}
+
+/* ---------- proof ---------- */
+.rail-wrap { position: relative; }
+.rail {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px, 360px); gap: 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  padding: 4px 20px 18px; margin: 0 -20px;
+  scrollbar-width: none;
+}
+.rail::-webkit-scrollbar { display: none; }
+.vcard { scroll-snap-align: start; }
+.vcard .poster { border-radius: var(--r-md); }
+.vcard .play { width: 52px; height: 52px; }
+.vcard .play svg { width: 20px; height: 20px; }
+.vmeta { padding: 12px 4px 0; }
+.vmeta b { font-size: 17px; font-weight: 800; }
+.vmeta p { font-size: 14.5px; color: var(--muted); line-height: 1.55; margin-top: 2px; }
+.vmeta p strong { color: #67e8f9; font-weight: 700; }
+.vcard.more a {
+  display: grid; place-items: center; text-align: center; gap: 10px;
+  aspect-ratio: 16/9; border-radius: var(--r-md); border: 1px dashed var(--line-strong);
+  color: var(--muted); font-weight: 700; padding: 20px; transition: background .2s, color .2s;
+}
+.vcard.more a:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+.vcard.more svg { width: 34px; height: 34px; color: #ff4e45; }
+.rail-nav { display: flex; gap: 8px; }
+.rail-nav button {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-strong);
+  display: grid; place-items: center; transition: background .2s;
+}
+.rail-nav button:hover { background: rgba(255,255,255,0.08); }
+.rail-nav svg { width: 18px; height: 18px; }
+.sub-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin: 0 0 20px; }
+.sub-head h3 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 800; line-height: 1.25; }
+.sub-head p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+@media (max-width: 600px) { .rail { grid-auto-columns: 82%; } .rail-nav { display: none; } }
+
+.wa-block { margin-top: 72px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.filters button {
+  font-size: 14.5px; font-weight: 700; padding: 9px 16px; border-radius: 999px;
+  border: 1px solid var(--line-strong); color: var(--muted); transition: all .2s;
+}
+.filters button:hover { color: var(--text); }
+.filters button[aria-pressed="true"] { background: var(--text); color: #0b0b12; border-color: var(--text); }
+.filters small { font: 700 12px 'Inter', sans-serif; opacity: 0.6; margin-inline-start: 4px; }
+.wall { columns: 4 230px; column-gap: 14px; }
+@media (max-width: 600px) { .wall { columns: 2; column-gap: 10px; } .shot { margin-bottom: 10px; border-radius: var(--r-sm); } }
+.shot {
+  break-inside: avoid; margin-bottom: 14px; display: block; width: 100%;
+  border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line);
+  background: #0b141a; position: relative; cursor: zoom-in;
+  transition: transform .25s var(--ease), border-color .2s;
+}
+.shot:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+.shot img { width: 100%; height: auto; }
+.shot figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 26px 12px 10px; text-align: right;
+  font-size: 13px; font-weight: 600; line-height: 1.4;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  opacity: 0; transition: opacity .2s;
+}
+.shot:hover figcaption, .shot:focus-visible figcaption { opacity: 1; }
+.wall-more { display: flex; justify-content: center; margin-top: 18px; }
+.wall-note { color: var(--faint); font-size: 13.5px; text-align: center; margin-top: 14px; }
+
+/* ---------- team ---------- */
+.support { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 64px; }
+.sup { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 26px; }
+.sup .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--purple-soft); color: #c4b5fd; margin-bottom: 16px; }
+.sup .ic svg { width: 22px; height: 22px; }
+.sup h3 { font-size: 19px; font-weight: 800; }
+.sup p { color: var(--muted); font-size: 15.5px; margin-top: 6px; }
+@media (max-width: 820px) { .support { grid-template-columns: 1fr; } }
+.team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.tm { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; display: flex; flex-direction: column; }
+.tm-top { display: flex; align-items: center; gap: 12px; }
+.tm img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; flex: none; background: #222; }
+.tm b { font-size: 16.5px; font-weight: 800; line-height: 1.3; }
+.tm .badges { display: flex; flex-wrap: wrap; gap: 2px 10px; margin-top: 3px; }
+.tm .badge { font-size: 12.5px; font-weight: 700; color: #fcd34d; unicode-bidi: isolate; }
+.tm p { color: var(--muted); font-size: 14px; line-height: 1.55; margin-top: 12px; }
+.tm.hide { display: none; }
+.team-more { display: flex; justify-content: center; margin-top: 20px; }
+@media (max-width: 980px) { .team { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .team { grid-template-columns: 1fr; } }
+
+/* ---------- 90 days ---------- */
+.ninety { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: stretch; }
+.nb { border-radius: var(--r-lg); padding: 28px; border: 1px solid var(--line); background: var(--card); }
+.nb h3 { font-size: 15px; font-weight: 800; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 14px; }
+.nb ul { list-style: none; display: grid; gap: 10px; }
+.nb li { display: flex; gap: 10px; align-items: center; font-weight: 600; font-size: 17px; }
+.nb li::before { content: ''; width: 20px; height: 20px; flex: none; border-radius: 50%; background: rgba(255,255,255,0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M7 7l6 6M13 7l-6 6' stroke='%23636b82' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/20px no-repeat; }
+.nb.after { border-color: rgba(139,92,246,0.4); background: linear-gradient(160deg, rgba(139,92,246,0.14), rgba(6,182,212,0.06)); }
+.nb.after h3 { color: #c4b5fd; }
+.nb.after li::before { background: rgba(34,211,238,0.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.7 2.7L14 7.5' stroke='%2322d3ee' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat; }
+.arrow90 { display: grid; place-items: center; font: 900 15px 'Inter', sans-serif; color: var(--purple); text-align: center; line-height: 1.2; }
+.arrow90 svg { width: 28px; height: 28px; margin: 6px auto 0; transform: scaleX(-1); }
+.ninety-foot { text-align: center; color: var(--muted); margin-top: 22px; }
+@media (max-width: 760px) { .ninety { grid-template-columns: 1fr; } .arrow90 svg { transform: rotate(90deg); } }
+
+/* ---------- faq ---------- */
+.faq { max-width: 820px; margin: 0 auto; display: grid; gap: 10px; }
+.qa { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card); }
+.qa.open { border-color: rgba(139,92,246,0.35); }
+.qa-h { width: 100%; display: flex; align-items: center; gap: 14px; padding: 18px 20px; text-align: right; font-size: 17.5px; font-weight: 700; }
+.qa-h span { flex: 1; }
+.qa .mod-b > div > div { padding: 0 20px 20px; color: #c3c8da; font-size: 16px; }
+.qa.open .mod-b { grid-template-rows: 1fr; }
+.qa.open .chev { transform: rotate(180deg); color: var(--purple); }
+.qa blockquote { margin-top: 12px; padding: 12px 16px; border-inline-start: 3px solid var(--purple); background: rgba(139,92,246,0.07); border-radius: 0 var(--r-sm) var(--r-sm) 0; font-size: 15px; color: #e3e5f3; }
+.qa blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+
+/* ---------- final cta ---------- */
+.final { text-align: center; padding: 110px 0 120px; position: relative; overflow: hidden; }
+.final::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(560px 300px at 50% 60%, rgba(139,92,246,0.22), transparent 70%); }
+.final h2 { font-size: clamp(32px, 5vw, 56px); font-weight: 900; line-height: 1.12; }
+.final p { color: var(--muted); font-size: 18px; margin: 16px auto 32px; max-width: 560px; }
+.final .btn { font-size: 18px; padding: 18px 30px; }
+.foot { border-top: 1px solid var(--line); padding: 28px 0 110px; color: var(--faint); font-size: 14px; }
+.foot .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* sticky mobile bar */
+.mbar {
+  position: fixed; z-index: 60; inset: auto 12px 12px 12px;
+  display: none; transform: translateY(140%); transition: transform .35s var(--ease);
+}
+.mbar.show { transform: none; }
+.mbar .btn { width: 100%; padding: 16px; font-size: 16.5px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+@media (max-width: 820px) { .mbar { display: block; } .foot { padding-bottom: 120px; } }
+
+/* dialogs */
+dialog { border: 0; padding: 0; margin: auto; background: transparent; color: var(--text); max-width: none; max-height: none; }
+dialog::backdrop { background: rgba(3,3,8,0.88); backdrop-filter: blur(6px); }
+.dlg { width: min(1100px, 94vw); }
+.dlg-frame { position: relative; aspect-ratio: 16/9; background: #000; border-radius: var(--r-md); overflow: hidden; }
+.dlg-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.dlg-cap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 2px 0; }
+.dlg-cap b { font-size: 17px; }
+.x { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center; flex: none; }
+.x:hover { background: rgba(255,255,255,0.18); }
+.x svg { width: 18px; height: 18px; }
+#lb .dlg { width: auto; max-width: 94vw; display: flex; flex-direction: column; align-items: center; }
+#lb img { max-height: 80vh; max-width: min(560px, 94vw); width: auto; border-radius: var(--r-md); }
+#lb .lb-row { display: flex; align-items: center; gap: 14px; }
+#lb .lb-cap { text-align: center; color: #d6d9ea; font-weight: 600; margin-top: 12px; max-width: 560px; }
+#lb .lb-nav { width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center; flex: none; }
+#lb .lb-nav:hover { background: rgba(255,255,255,0.2); }
+#lb .lb-nav svg { width: 20px; height: 20px; }
+#lb .x { position: fixed; top: 16px; left: 16px; }
+@media (max-width: 600px) { #lb .lb-nav { display: none; } }
+:focus-visible { outline: 2px solid #a78bfa; outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo en" href="#top">nCode<span>.</span></a>
+    <nav class="nav" aria-label="ניווט">
+      <a href="#path">המסלול</a>
+      <a href="#proof">עדויות</a>
+      <a href="#team">מנטורים</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+    <a class="btn btn-wa btn-sm js-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg><span class="js-wa-short">דברו איתנו</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <div class="greet"><i></i><span class="js-greet">הסילבוס המלא של nCode</span></div>
+        <h1>מ-0 לנכס דיגיטלי רווחי.<br><span class="grad">SaaS משלכם,&nbsp;עם&nbsp;AI.</span></h1>
+        <p class="sub">המסלול המלא להקמת עסק SaaS: מהרעיון, דרך בנייה עם סוכני AI, ועד הלקוחות המשלמים. גם בלי רקע בתכנות.</p>
+        <div class="stats">
+          <div class="stat"><b>19</b><span>מודולי ליבה</span></div>
+          <div class="stat"><b>375+</b><span>שיעורים</span></div>
+          <div class="stat"><b>50+</b><span>שעות תוכן</span></div>
+          <div class="stat"><b>1:1</b><span>מנטורים בזום</span></div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-ghost" href="#path">למסלול המלא</a>
+          <a class="btn btn-ghost" href="#proof">לעדויות</a>
+        </div>
+      </div>
+      <div class="rv">
+        <button class="poster js-video" data-v="mashup" aria-label="נגן: סטודנטים של nCode במילים שלהם">
+          <img src="../images/videos/mashup.jpg" alt="">
+          <span class="dur">1:43</span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          <span class="cap"><b>סטודנטים של nCode, במילים שלהם</b><span>פחות משתי דקות. תוצאות אמיתיות.</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="תוצאות סטודנטים">
+    <div class="strip-track js-strip"></div>
+  </div>
+
+  <!-- ROADMAP -->
+  <section id="path">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="eyebrow">המסלול המלא</div>
+        <h2 class="title">הדרך מרעיון ראשון<br>ללקוח משלם</h2>
+        <p class="lead">6 שלבים, 20 מודולים. כל מודול נגמר עם משימה ביד, לא עם תיאוריה. לחצו על מודול כדי לראות מה לומדים בו.</p>
+      </div>
+      <div class="path-tools rv">
+        <span class="note">מודולים 17 ו-20 הם הרצאות בונוס.</span>
+        <button class="btn btn-ghost btn-sm js-expand">פתחו את כל המודולים</button>
+      </div>
+      <div class="phases js-phases"></div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="proof" style="background: var(--surface); border-block: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="eyebrow">סיפורי הצלחה</div>
+        <h2 class="title">הם עשו את זה.<br>גם אתם יכולים.</h2>
+        <p class="lead">סטודנטים אמיתיים, מוצרים אמיתיים, לקוחות משלמים אמיתיים. בווידאו, ובהודעות שהם שלחו לקהילה בזמן אמת.</p>
+      </div>
+
+      <div class="sub-head rv">
+        <div>
+          <h3>שומעים את זה מהם</h3>
+          <p>לחצו על סרטון כדי לצפות</p>
+        </div>
+        <div class="rail-nav">
+          <button class="js-rail-prev" aria-label="הקודם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          <button class="js-rail-next" aria-label="הבא"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="rail-wrap rv"><div class="rail js-rail"></div></div>
+
+      <div class="wa-block">
+        <div class="sub-head rv">
+          <div>
+            <h3>ישר מהוואטסאפ של הקהילה</h3>
+            <p class="js-wa-count">הודעות אמיתיות של סטודנטים. פרטים מזהים טושטשו.</p>
+          </div>
+        </div>
+        <div class="filters rv js-filters" role="group" aria-label="סינון עדויות"></div>
+        <div class="wall js-wall"></div>
+        <div class="wall-more"><button class="btn btn-ghost js-more">הציגו עוד</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="eyebrow">ליווי צמוד</div>
+        <h2 class="title">לא לומדים לבד.</h2>
+        <p class="lead">מנטורים שכבר בנו מוצרים, קהילה פעילה של יזמים, ומרצים שעשו את זה בעצמם.</p>
+      </div>
+      <div class="support">
+        <div class="sup rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M15.5 10.5l6-3.5v10l-6-3.5"/></svg></div>
+          <h3>מנטורים 1:1 בזום</h3>
+          <p>מפגשים אישיים עם מנטורים שכבר בנו מוצרים מצליחים: מענה לשאלות, משוב על הפרויקט שלכם והכוונה צעד אחר צעד.</p>
+        </div>
+        <div class="sup rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.6c2.8.1 4.9 1.8 5.5 4.9"/></svg></div>
+          <h3>קהילה ולייבים שבועיים</h3>
+          <p>קבוצות וואטסאפ, לייבים שבועיים ומפגשי קהילה. תמיד יש למי לפנות ועם מי לשתף.</p>
+        </div>
+        <div class="sup rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+          <h3>מרצים מהשטח</h3>
+          <p>יזמים ואנשי מקצוע שמלמדים מניסיון אישי, עם אקזיטים ומוצרים של מיליוני דולרים. לא מתוך ספר.</p>
+        </div>
+      </div>
+      <div class="sub-head rv"><div><h3>נבחרת המרצים והמנטורים</h3></div></div>
+      <div class="team js-team"></div>
+      <div class="team-more"><button class="btn btn-ghost js-team-more">הציגו את כל המרצים</button></div>
+    </div>
+  </section>
+
+  <!-- 90 DAYS -->
+  <section style="padding-top: 24px;">
+    <div class="wrap">
+      <div class="head center rv">
+        <div class="eyebrow">הטרנספורמציה</div>
+        <h2 class="title">90 יום. מ-0 ל-SaaS רווחי.</h2>
+      </div>
+      <div class="ninety rv">
+        <div class="nb">
+          <h3>היום</h3>
+          <ul><li>אין רקע טכנולוגי</li><li>רעיונות בלי ביצוע</li><li>תלות במפתחים</li><li>לא יודעים מאיפה להתחיל</li></ul>
+        </div>
+        <div class="arrow90 en">90<br>DAYS<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="nb after">
+          <h3>אחרי 90 יום</h3>
+          <ul><li>אפליקציית SaaS חיה</li><li>לקוחות משלמים</li><li>קמפיינים שרצים</li><li>עסק שמכניס כסף</li></ul>
+        </div>
+      </div>
+      <p class="ninety-foot rv">והקהילה ממשיכה ללוות אתכם גם אחרי ההכשרה.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top: 40px;">
+    <div class="wrap">
+      <div class="head center rv">
+        <div class="eyebrow">שאלות שעולות אחרי השיחה</div>
+        <h2 class="title">עוד מתלבטים? זה טבעי.</h2>
+      </div>
+      <div class="faq js-faq"></div>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final">
+    <div class="wrap rv">
+      <h2 class="js-final-h">מוכנים להקים את ה-SaaS<br><span class="grad">הראשון שלכם?</span></h2>
+      <p class="js-final-p">יש שאלה שלא קיבלה מענה? אנחנו כאן. שלחו הודעה ונחזור אליכם.</p>
+      <a class="btn btn-wa js-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg><span class="js-wa-long">דברו איתנו בוואטסאפ</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span class="en">nCode. Build. Launch. Scale.</span><a href="https://www.ncode.co.il" target="_blank" rel="noopener">ncode.co.il</a></div>
+</footer>
+
+<div class="mbar"><a class="btn btn-wa js-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg><span class="js-wa-long">דברו איתנו בוואטסאפ</span></a></div>
+
+<dialog id="vd" aria-label="נגן וידאו">
+  <div class="dlg">
+    <div class="dlg-frame"><iframe title="סרטון עדות" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="dlg-cap"><b class="js-vd-title"></b><button class="x js-close" aria-label="סגירה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  </div>
+</dialog>
+
+<dialog id="lb" aria-label="צילום מסך">
+  <button class="x js-close" aria-label="סגירה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="dlg">
+    <div class="lb-row">
+      <button class="lb-nav js-lb-prev" aria-label="הקודם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <img alt="">
+      <button class="lb-nav js-lb-next" aria-label="הבא"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    </div>
+    <div class="lb-cap"></div>
+  </div>
+</dialog>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.03c-.25.69-1.44 1.32-1.99 1.37-.51.05-.99.23-3.33-.69-2.82-1.11-4.6-4-4.74-4.18-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.97-2.31c.25-.28.55-.35.74-.35l.53.01c.17.01.4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.24 2.25 1.38.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.6.76 1.87.9.28.14.46.21.53.32.07.12.07.67-.18 1.36z"/></symbol>
+</svg>
+
+<script>
+/* ============================================================
+   Sales reps: each rep sends the link with their key, e.g.
+   https://ncode-co-il.github.io/ncode-syllabus/v2/?rep=dor
+   Add a rep here: key: { name: 'שם', phone: '9725XXXXXXXX' }
+   (phone in international format, digits only).
+   A link can also carry the details itself: ?name=דור&wa=9725XXXXXXXX
+   With no rep, the WhatsApp buttons fall back to FALLBACK_URL.
+   ============================================================ */
+const REPS = {
+  // dor: { name: 'דור', phone: '9725XXXXXXXX' },
+};
+const FALLBACK_URL = 'https://www.ncode.co.il';
+
+const DATA = {"phases":[{"num":"I","title":"הבסיס — מיינדסט ותשתית","sub":"לפני שבונים עסק, בונים ראש של יזם","modules":[{"n":"01","title":"מבוא להכשרה","by":["ben-lavia-new.jpg"],"meta":"4 פרקים • 12 שיעורים","hook":"לפני שרצים — לומדים לחשוב נכון","desc":"המודול שבונה את הבסיס לכל מה שיבוא אחריו. תלמדו איך לנהל זמן כמו יזם אמיתי, איך לבנות לעצמכם שגרת למידה אפקטיבית, ולמה 90% מהאנשים שקונים קורסים לא מגיעים לתוצאות — ואיך אתם תהיו בעשירון האחר.","topics":["ניהול זמן","מיומנויות למידה","מיינדסט יזמי","פירמידת ההצלחה","Monday","Google Calendar"]},{"n":"02","title":"מבוא ל-SaaS","by":["ben-lavia-new.jpg","eran-galperin.jpg"],"meta":"4 פרקים • 14 שיעורים","hook":"להבין את המשחק לפני שנכנסים למגרש","desc":"מה הופך SaaS למודל העסקי הכי חזק שקיים? למה החברות הגדולות בעולם בנויות על מנויים חודשיים? ומה ההבדל בין בוטסטראפ לסטארטאפ קלאסי? תבינו את המודל הרזה (Lean Startup), תכירו את היתרונות והחסרונות של SaaS, ותקבלו תמונה מלאה על השוק.","topics":["מודל SaaS","Lean Startup","Bootstrap vs Startup","Product-Market Fit","מנטורים","No-Code"]}]},{"num":"II","title":"מציאת הרעיון — רעיונאות וולידציה","sub":"איך מוצאים רעיון שווה ומוודאים שאנשים ישלמו עליו","modules":[{"n":"03","title":"רעיונאות ויציאה לדרך","by":["ben-lavia-new.jpg","eran-galperin.jpg","lior-azulai.jpg"],"meta":"8 פרקים • 32 שיעורים","hook":"הרעיון הנכון נמצא — רק צריך לדעת איפה לחפש","desc":"הרוב תוקעים כאן. ״אין לי רעיון״ — המשפט הכי נפוץ בעולם היזמות. במודול הזה תקבלו מסגרת שיטתית ליצירת רעיונות, סינון שלהם, ובחירת הרעיון שהכי מתאים לכם. תלמדו איך לחפש בעיות אמיתיות, איך לזהות נישות רווחיות, מתי כדאי לקחת שותף ומתי לא, ואיך בונים קהל עוד לפני שיש מוצר.","topics":["שיטות רעיונאות","סינון רעיונות","שותפויות","בניית קהל","הפצה","ניתוח מתחרים"]},{"n":"04","title":"ולידציה וחקר שוק","by":["ben-lavia-new.jpg","eran-galperin.jpg"],"meta":"7 פרקים • 28 שיעורים","hook":"אל תבנו מוצר שאף אחד לא רוצה לקנות","desc":"לפני שמשקיעים חודשים בפיתוח — בודקים שיש ביקוש. תלמדו איך לבנות תוכנית עסקית קצרה ואפקטיבית, איך לעשות חקר שוק שחושף הזדמנויות, ואיך לבדוק את הרעיון שלכם בשטח — עוד לפני שקיים מוצר.","topics":["תוכנית עסקית","חקר שוק","ולידציה טכנולוגית","איטרציה","מחקר לקוחות"]}]},{"num":"III","title":"בניית המוצר — מאיפיון לאפליקציה חיה","sub":"שלושה מודולים שהופכים רעיון למוצר שעובד","modules":[{"n":"05","title":"איפיון MVP","by":["ben-lavia-new.jpg","daniel-goldman.jpg"],"meta":"2 פרקים • 10 שיעורים","hook":"לדעת בדיוק מה לבנות — ומה לא","desc":"לפני שמתחילים לבנות — צריך לדעת בדיוק מה לבנות. תלמדו למפות את הפיצ׳רים הקריטיים שהלקוח באמת צריך, לכתוב מסמך אפיון (PRD) שהופך את הפיתוח ליעיל פי 10, ולחסוך חודשים של עבודה מיותרת. למה מתחילים עם גרסה ממוקדת? כי ככה מגיעים ללקוחות משלמים מהר יותר — ומשפרים לפי מה שהם באמת צריכים.","topics":["אפיון מוצר","מסמך אפיון (PRD)","סדר עדיפויות","חשיבת מוצר"]},{"n":"06","title":"Vibe Coding עם סוכני AI","by":["daniel-goldman.jpg"],"meta":"5 פרקים • 24 שיעורים","hook":"מרעיון לאפליקציה עובדת — בלי שורת קוד","desc":"כאן לומדים לבנות עם סוכני ה-AI החזקים בעולם — Claude Code ו-Codex. תלמדו איך לבנות אפליקציה מלאה מאפס, לחבר APIs, לשלב סליקה, ולהגיע להשקה — בלי לכתוב שורת קוד בעצמכם.","topics":["Claude Code","Codex","חיבור API","סליקה","השקה"]},{"n":"07","title":"פיתוח עם Anti Gravity","by":["daniel-goldman.jpg"],"meta":"9 פרקים • 42 שיעורים","hook":"הכלים של המקצוענים — נגישים גם לכם","desc":"המודול הכי עמוס — וגם הכי שווה. תלמדו לבנות מוצר ברמה גבוהה עם הכלים שהמקצוענים עובדים איתם — כולל עבודה עם סוכני AI לפיתוח כמו Claude Code ו-Codex, וחיבור MCP שמחבר את הסוכן ישירות לכלים שלכם. תפרסמו את המוצר באינטרנט (Vercel), תעקבו אחרי מה שהמשתמשים עושים בו (PostHog), ותנהלו את הפרויקט בצורה מסודרת — כולל בניית גרסת מובייל ולוח בקרה למנהלים. זה המודול שהופך אתכם ממתחילים ליזמים טכנולוגיים אמיתיים.","topics":["ניהול קוד (Git)","Anti Gravity","Claude Code","Codex","MCP","פרסום (Vercel)","אנליטיקס (PostHog)","גרסת מובייל","לוח בקרה"]}]},{"num":"IV","title":"מהמוצר לשוק — תמחור, השקה ומיתוג","sub":"איך יוצאים לעולם, מתחילים למכור, ומרוויחים את הדולר הראשון","modules":[{"n":"08","title":"תמחור והצעה","by":["ben-lavia-new.jpg"],"meta":"3 פרקים • 14 שיעורים","hook":"הצעה שמרגיש טיפש לסרב לה","desc":"המחיר שלכם הוא לא מספר — הוא הודעה לשוק. תלמדו לבנות הצעה שאי אפשר לסרב לה, לתמחר חבילות בצורה שמניעה לקוחות לבחור את מה שאתם רוצים, לבדוק מה עובד יותר טוב על הלקוחות, ולהגדיל את ההכנסה מכל לקוח קיים.","topics":["הצעה ייחודית (USP)","תמחור חבילות","בדיקת מחירים","הגדלת הכנסה ללקוח","Go-To-Market"]},{"n":"09","title":"השקה, מיתוג ואסטרטגיה","by":["ben-lavia-new.jpg"],"meta":"5 פרקים • 18 שיעורים","hook":"השקה מוצלחת היא לא מזל — היא תכנון","desc":"רגע ההשקה הוא הרגע שהכל מתחבר. תלמדו איך להכניס טסטרים נכון, איך לבנות קהילת וואטסאפ סביב המוצר, מה ההבדל בין אסטרטגיה לטקטיקה, איך בונים מותג שמרגיש Premium, ואיך לשמר לקוחות.","topics":["טסטרים","אסטרטגיה","מיתוג","השקה","שימור לקוחות","קהילות"]}]},{"num":"V","title":"שליטה בשיווק — מהקופי ועד הקמפיין","sub":"כל מה שצריך כדי להביא לקוחות באופן עקבי","modules":[{"n":"10","title":"כתיבה שיווקית ודפי נחיתה","by":["netanel-avrahami.jpg"],"meta":"3+ פרקים • 20 שיעורים","hook":"המילים שהופכות מבקרים ללקוחות משלמים","desc":"דף נחיתה טוב שווה יותר מעשרה קמפיינים ממומנים. תלמדו את עקרונות הכתיבה השיווקית שמוכרת, איך לבנות דפי נחיתה שממירים, ואיך לכתוב מסרים שיווקיים שפוגעים בנקודות הכאב של הלקוח.","topics":["כתיבה שיווקית","דפי נחיתה","מסרים שיווקיים","המרות"]},{"n":"11","title":"עולם השיווק","by":["oded-bedihi.jpg","ben-lavia-new.jpg"],"meta":"6 פרקים • 28 שיעורים","hook":"להבין את כללי המשחק — ולשחק אותו טוב","desc":"מודול שלם שמכסה את כל מה שצריך לדעת על שיווק דיגיטלי — מהצעת הערך ועד בניית משפכים שיווקיים. תבינו איך עובד שיווק אורגני וממומן, איך עובדים עם שותפויות (אפיליאציה) ומשפיענים, ואיך פונים ישירות לעסקים. כולל הרצאה מיוחדת של שלו יפרח על Bucket עם הטבות בלעדיות לתלמידי nCode.","topics":["הצעת ערך","משפכי שיווק","שיווק אורגני","אפיליאציה (שותפויות)","שיווק משפיענים","פנייה יזומה","קהלי יעד"]},{"n":"12","title":"פסיכולוגיה צרכנית ושיווקית","by":["niv-israeli.jpg"],"meta":"2 פרקים • 8 שיעורים","hook":"להבין למה אנשים קונים — ולמה לא","desc":"המודול שנותן לכם יתרון לא הוגן. תלמדו את העקרונות הפסיכולוגיים שמניעים החלטות רכישה — מאפקט העיגון ועד עקרון המחסור.","topics":["פסיכולוגיה צרכנית","עקרונות שכנוע","טריגרים רגשיים","החלטות רכישה"]},{"n":"13","title":"קמפיינים ממומנים","by":["baruch-hadad.jpg"],"meta":"10 פרקים • 46 שיעורים","hook":"להפוך שקל לשניים — שוב ושוב ושוב","desc":"המודול הכי מעשי בהכשרה. מהקמת חשבון פרסום ועד אופטימיזציה של קמפיין חי. נתחיל עם Meta Ads (פייסבוק ואינסטגרם) לעומק, ונרחיב גם ל-Google Ads, YouTube ו-LinkedIn — כדי שתדעו להגיע לקהל שלכם בכל פלטפורמה.","topics":["Meta Ads","Google Ads","YouTube Ads","LinkedIn Ads","ניהול קהלים","אופטימיזציה","קייס סטאדי"]}]},{"num":"VI","title":"צמיחה ותפעול — ניהול עסק אמיתי","sub":"הידע שמגדיל מוצר חי — מהדולר הראשון בדרך למיליון","modules":[{"n":"14","title":"Product — ניהול מוצר","by":["gal-moran.jpg","roi-sagron-linkedin.jpg","ben-lavia-new.jpg","daniel-goldman.jpg"],"meta":"2 פרקים • 10 שיעורים","hook":"לבנות מוצר שלקוחות מתים עליו","desc":"בשלב הזה כבר יש לכם מוצר באוויר ולקוחות שמשתמשים בו. עכשיו תלמדו איך לנהל מוצר חי, איך לקבל פידבק מלקוחות ולהפוך אותו לפיצ׳רים חדשים, ואיך לבנות תוכנית פיתוח שמובילה לצמיחה מתמשכת.","topics":["ניהול מוצר","Road Map","פידבק לקוחות","פיצ'רים"]},{"n":"15","title":"פיננסים בעסק שלך","by":["david-haimi.jpg"],"meta":"4 פרקים • 16 שיעורים","hook":"לדעת את המספרים — ולשלוט בהם","desc":"כסף נכנס — אבל כמה באמת נשאר? תלמדו את הבסיס הפיננסי שכל יזם חייב לדעת — מונחים, מדדים, תזרים מזומנים, ואיך לקרוא את המספרים של העסק שלכם.","topics":["כמה נשאר בסוף?","ניהול תזרים","מדדי הצלחה","תקציב שיווק"]},{"n":"16","title":"משפטים וחוק","by":["ariel-shoshan.jpg"],"meta":"2 פרקים • 8 שיעורים","hook":"להגן על העסק שבניתם — חוקית","desc":"הצד שאף אחד לא מלמד — וכולם צריכים. תלמדו איך פותחים עוסק פטור או חברה בע״מ, איך מתנהלים מול מע״מ ורשות המיסים, איך כותבים הסכמי שותפות שמגנים על שני הצדדים, ומה חייב להיות בתנאי השימוש ומדיניות הפרטיות של המוצר שלכם. כולל שיעור מיוחד עם עו״ד שמתמחה בטכנולוגיה.","topics":["פתיחת עוסק / חברה","מע״מ ומיסוי","הסכמי שותפות","תנאי שימוש","מדיניות פרטיות"]},{"n":"17","title":"בונוס — מרצה אורח","by":["naor-shuan.jpg"],"meta":"פרק בונוס","hook":"נקודת מבט חדשה מיזם שעשה את זה","desc":"שיעור בונוס עם מרצה אורח שחולק את התהליך האמיתי שלו — הטעויות, ההצלחות, והתובנות שאי אפשר ללמוד מספרים.","topics":["מרצה אורח","סיפור אישי","תובנות מהשטח"]},{"n":"18","title":"רשימות תפוצה ודיוור","by":["asaf-stern.png"],"meta":"3 פרקים • 16 שיעורים","hook":"הערוץ שאף אחד לא יכול לקחת ממכם","desc":"רשימת תפוצה היא הנכס הכי חזק של כל עסק דיגיטלי. תלמדו איך לבנות רשימה, איך לכתוב מיילים שנפתחים, ואיך לעבוד עם מערכת רב-מסר. כולל הדרכה מעשית מלאה על בניית אוטומציות דיוור.","topics":["רשימות תפוצה","דיוור","רב-מסר","אוטומציות","Email Marketing"]},{"n":"19","title":"סיכום ויציאה לדרך","by":["ben-lavia-new.jpg"],"meta":"מודול סיום","hook":"הגעתם לכאן עם מוצר חי — עכשיו נוודא שהוא ממריא","desc":"בשלב הזה כבר יש לכם אפליקציה באוויר וקמפיינים שרצים. המודול הזה סוגר את המעגל: סיכום כל מה שעשיתם, תוכנית פעולה ממוקדת לחודשים הקרובים, ויציאה לדרך עם הכלים, הביטחון, והקהילה שמלווה אתכם קדימה.","topics":["סיכום ומיפוי","תוכנית 90 יום","צעדים הבאים","קהילה ותמיכה"]},{"n":"20","title":"הרצאות פרונטליות","by":["idan-waller.webp","shalev-ifrah.jpg","yehuda-niv.jpg","yonatan-atias.jpg","asaf-stern.png","lior-azulai.jpg","ben-lavia-new.jpg"],"meta":"הרצאות בונוס","hook":"יזמים מהשורה הראשונה משתפים את הסודות שלהם — פנים אל פנים","desc":"הרצאות פרונטליות בלעדיות מיזמים מובילים שחולקים את הניסיון האמיתי שלהם — הצלחות, כישלונות, ותובנות שלא תמצאו בשום מקום אחר.","topics":["הרצאות אורח","שאלות ותשובות","נטוורקינג"]}]}],"instructors":[{"img":"images/instructors/ben-lavia-new.jpg","name":"בן לביא","role":"ייסד ומכר את Kaps.co.il ואת Pers.co.il, מייסד 4 תוכנות נוספות, ויוצר ״פודקאסט הקול״ עם 5 מיליון האזנות","badges":["2 אקזיטים","5M+ האזנות"]},{"img":"images/instructors/eran-galperin.jpg","name":"ערן גלפרין","role":"מייסד Gymdesk — בוטסטרפ את החברה לבד ומכר אותה באקזיט של $32.5M. כיום משקיע ומנטור ליזמי SaaS","badges":["אקזיט $32.5M","בוטסטרפ ללא משקיעים"]},{"img":"images/instructors/asaf-stern.png","name":"אסף שטרן","role":"המייסד של ״שלח מסר״ — פלטפורמת SaaS ישראלית לדיוור, SMS ודפי נחיתה שמשרתת אלפי עסקים בארץ ובעולם","badges":["50,000+ משתמשים"]},{"img":"images/instructors/yehuda-niv.jpg","name":"יהודה ניב","role":"מייסד Spines ובית ההוצאה הגדול בישראל — מהפכת ה-AI בעולם ההוצאה לאור","badges":["גייס $22.5M","8,000+ ספרים"]},{"img":"images/instructors/yonatan-atias.jpg","name":"יונתן אטיאס","role":"יזם, משקיע ומייסד Sayollo — פלטפורמת פרסום ורכישות בתוך משחקי מובייל","badges":["גייס $6M"]},{"img":"images/instructors/idan-waller.webp","name":"עידן וולר","role":"מייסד-שותף ב-BlueThrone — חברה שרוכשת ומגדילה אפליקציות מובייל, עם 30+ אפליקציות ו-35 עובדים ב-11 מדינות","badges":["$20M+ מחזור שנתי"]},{"img":"images/instructors/shalev-ifrah.jpg","name":"שלו יפרח","role":"יזם דיגיטלי ומייסד מכללת ריצ׳ר ושותף מייסד MegaPixel — SaaS בוטסטראפ בעולם המכירות","badges":["10,000+ סטודנטים"]},{"img":"images/instructors/lior-azulai.jpg","name":"ליאור אזולאי","role":"יזם סדרתי בתחום הטכנולוגיה וה-SaaS","badges":["$100K+ במנויים בחודש"]},{"img":"images/instructors/daniel-goldman.jpg","name":"דניאל גולדמן","role":"שותף מייסד ב-Tadam — פלטפורמת AI שמייצרת קריאייטיבים ומודעות שיווקיות תוך 15 שניות","badges":["5 ספרות במנויים חודשיים"]},{"img":"images/instructors/eilon-grouper.png","name":"אילון גרופר","role":"יוצר תוכן AI מוביל בישראל עם מיליוני צפיות, מרצה ומנחה סדנאות AI לצד Google ו-Meta","badges":["90K+ עוקבים"]},{"img":"images/instructors/naor-shuan.jpg","name":"נאור שוען","role":"יזם איקומרס שבנה מותג עם מעל $1M במכירות כבר בגיל 17, ומייסד מספר מותגי איקומרס וסאאס","badges":["$1M+ בגיל 17"]},{"img":"images/instructors/eilon-levi.jpg","name":"אילון לוי","role":"שגריר רשמי של Bubble העולמית ומפתח נו-קוד מהבולטים בארץ","badges":[]},{"img":"images/instructors/oded-bedihi.jpg","name":"עודד בדיחי","role":"מייסד סמארטלידס — סוכנות שיווק שייצרה ללקוחותיה הכנסות של 30M+ ₪ עם תשואה ממוצעת של 7x על פרסום","badges":["ניהל תקציבים ₪4M+"]},{"img":"images/instructors/baruch-hadad.jpg","name":"ברוך חדד","role":"מייסד ומנכ״ל Baruch Digital — סוכנות קמפיינים דיגיטליים מהמובילות בישראל","badges":["קמפיינים בעשרות מיליוני ₪"]},{"img":"images/instructors/ariel-shoshan.jpg","name":"אריאל שושן","role":"עו״ד המתמחה בדיני סייבר, פרטיות וקניין רוחני דיגיטלי, בוגר אוניברסיטת תל אביב בשיתוף UC Berkeley","badges":[]},{"img":"images/instructors/niv-israeli.jpg","name":"ניב ישראלי","role":"מייסד סקייל רווחי, וקופירייטר מהמובילים בארץ","badges":[]},{"img":"images/instructors/david-haimi.jpg","name":"דוד אליהו חיימי","role":"מנכ״ל Infinity Finance — ליווי פיננסי מקצה לקצה ליזמים, ניהול נכסים של מעל מיליארד ₪","badges":[]},{"img":"images/instructors/zohar-vaanunu.jpg","name":"זוהר וענונו","role":"מעורך וידאו למייסד פלטפורמת AI ליצירת תוכן עם מעל 20,000 משתמשים רשומים","badges":["41,000$ MRR"]},{"img":"images/instructors/netanel-avrahami.jpg","name":"נתנאל אברהמי","role":"ארכיטקט עסקי, מייסד 7 חברות וניהל תקציבים של מעל 100 מיליון ₪, מייסד HUMANS ו-HYPERZ","badges":[]},{"img":"images/instructors/gal-moran.jpg","name":"גל מורן","role":"שותף-מייסד ו-COO ב-Varolio — פלטפורמת AI לתקשורת ארגונית, בוגר הטכניון עם עשור בעולם הארגוני","badges":[]},{"img":"images/instructors/roi-sagron-linkedin.jpg","name":"רועי סגרון","role":"שותף-מייסד ו-CPO ב-Varolio — מומחה אסטרטגיית מוצר, לשעבר מנהל מוצר ב-Virgo ומנטור ליזמים צעירים","badges":[]},{"img":"images/instructors/shuval-zanzuri.jpg","name":"שובל זנזורי","role":"מייסדת Shoval Studio — סטודיו למיתוג, עיצוב גרפי ובניית אתרים ב-Shopify ו-WordPress","badges":[]}],"wa":[["wa-01.png","הקורס הכניס למעלה מ-25,000 ש״ח",["money"]],["wa-03.png","מחזור חודשי 70,000 שקל",["money"]],["wa-02.png","ריטיינר 1,970 ש״ח לחודש",["money"]],["wa-10.png","22K דולר בחודש (Stripe)",["money"]],["wa-04.png","20 אלף בחודש",["money"]],["wa-07.png","עסקת 9K על דפי נחיתה עם Claude Code",["money"]],["wa-06.png","100K בשנה עם קלוד",["money"]],["wa-15.png","4 סליקות ראשונות",["first","money"]],["wa-08.png","מעל 1000$ MRR ו-50 מנויים",["money"]],["wa-16.png","מוצר מוכן בחודש וחצי",["launch"]],["wa-20.png","90 מנויים בשבועיים",["money"]],["wa-11.png","דשבורד עם 6 לקוחות משלמים",["money"]],["wa-12.png","הרוויח בשעות מה שהנדסאי מרוויח בחודש",["money"]],["wa-05.png","דוח סליקות חי",["money"]],["wa-13.png","שתי אפליקציות בפרודקשן",["launch"]],["wa-09.png","הסליקה הראשונה",["first"]],["wa-17.png","סליקות אוטומטיות",["money"]],["wa-14.png","לקוח משלם ראשון",["first"]],["wa-19.png","18 משלמים מ-36",["money"]],["wa-18.png","קבלה על 2,400 ש״ח מלקוח",["money"]],["wa-21.png","עבר את 150 הלקוחות המשלמים",["money"]],["wa-28.png","השיק SaaS אחרי שלושה חודשי פיתוח",["launch"]],["wa-27.png","מעל 100 מכירות בחודש",["money"]],["wa-22.png","15,200 ש״ח MRR ו-200 משתמשים",["money"]],["wa-29.png","70,000 חשיפות לאפליקציה",["launch"]],["wa-25.png","3,049 דולר סליקות ו-884 דולר MRR",["money"]],["wa-33.png","מענה מהקהילה תוך 15 דקות",["community"]],["wa-23.png","מנויים משלמים ראשונים דרך Polar",["first","launch"]],["wa-26.png","108 עסקאות שבוצעו בהצלחה",["money"]],["wa-30.png","אפליקציה נייטיב באפ סטור והסליקה הראשונה",["first","launch"]],["wa-24.png","מנוי שנתי ראשון של 601 דולר",["first","money"]],["wa-31.png","יום מכירות פורה במיוחד",["money"]],["wa-32.png","נעם לביא על המערכת החדשה והקשב לקהילה",["community"]],["wa-88.png","זה לא היה קורה ללא ההכשרה",["community"]],["wa-68.png","לירן שמש עובר את 150 המנויים המשלמים",["money"]],["wa-43.png","Payouts של יותר מ-2,000 דולר בשבוע",["money"]],["wa-71.png","דוד טרוציק: סליקה ראשונה",["first"]],["wa-39.png","תמיר פנר: SaaS לעורכי דין עם 5 לקוחות משלמים",["money"]],["wa-79.png","טל שייך: האפליקציה עלתה לאפ סטור",["launch"]],["wa-50.png","אקזיט של 300K על אפליקציה של סטודנט",["money","launch"]],["wa-70.png","יוסף אחדות: קהילה כמו פה עוד לא פגשתי",["community"]],["wa-40.png","4,000 ש״ח אחרי עמלת סליקה ו-30 מנויים בשבוע",["money"]],["wa-78.png","ליאור פריינטה: תודה שלא ויתרת עליי",["community"]],["wa-58.png","סליקות ראשונות תוך 8 ימים מהשקה",["first","money","launch"]],["wa-67.png","לירן שמש: לא עשיתי סכום כזה ממשהו שהקמתי בעצמי",["launch","money"]],["wa-51.png","התראת Stripe על תשלום של 566 דולר",["money"]],["wa-64.png","23 יום מרעיון גולמי לטסטרים",["launch"]],["wa-38.png","אביתר: Hamagen.online באוויר עם לקוחות משלמים",["launch"]],["wa-76.png","זאק: סליקה ראשונה עוד לפני מערכת סליקה",["first"]],["wa-86.png","מ-MVP שנגנז להשקה עם Claude Code",["launch"]],["wa-55.png","תשלום בסך 99 ש״ח בוצע בהצלחה: השקל הראשון מתוכנה",["first","money","launch"]],["wa-66.png","ReelBoom.ai אחרי 4 מיזמים שנפלו",["launch"]],["wa-47.png","נתנאל חדד: ההחלטה הכי טובה שקיבלתי",["community"]],["wa-62.png","עסקה של 10,000 ש״ח ומכללה שרוצה לרכוש קרדיטים",["money"]],["wa-82.png","טל שייך: 200 דולר ו-20+ מנויים",["money"]],["wa-34.png","השקת E-magine ai עם עשרות יוזרים ראשונים",["first","launch"]],["wa-85.png","770 ש״ח מ-3 משתמשים עם ROAS יומי של 15",["money"]],["wa-72.png","השקה בזמן מלחמה וטסטרים ראשונים",["first","launch"]],["wa-81.png","טל שייך: 2,000 הורדות ולקוחות משלמים תוך 3 ימים",["money","launch"]],["wa-60.png","עידו ראם על מנטור בן 17 שבודק מה איתו ב-23:00",["community"]],["wa-49.png","לפני ואחרי: סלק תוך 3 ימים את הסכום שכתב",["launch","money"]],["wa-84.png","חן מור: 20+ מכירות מסטורי אחד",["money"]],["wa-42.png","מ-0 אחרי שחרור מהצבא ל-95 רשומים ו-3 לקוחות משלמים",["money"]],["wa-52.png","קבלת Polar על מנוי של 99 ש״ח בחודש",["money"]],["wa-59.png","נועם: זו לא קורס דיגיטלי, זו הכשרה ששווה הכל",["community"]],["wa-73.png","דוד טרוציק: לקוח משלם ראשון אחרי 3 חודשים",["first"]],["wa-45.png","חיה מעטוף: מערכת להדמיית פאות והסכם עם שותפה",["launch"]],["wa-37.png","2,046 ש״ח ביום עם ROAS 21",["money"]],["wa-83.png","טל שייך: אפסיילים ומנוי לחצי שנה",["launch","money"]],["wa-54.png","רון מינס: היעד — שקל אחד מתוכנה שבניתי",["first"]],["wa-77.png","GluCause אושרה להפצה באפ סטור",["launch"]],["wa-35.png","הדר אלון: הלייבים נותנים בוסט גדול",["community"]],["wa-65.png","ליאור כהן: התשלומים הראשונים במערכת",["first","launch"]],["wa-75.png","10 שעות ביום וקהילה של 420 איש",["community"]],["wa-57.png","זוהר: הסליקות הראשונות מהסאס",["first","money"]],["wa-80.png","קולי באוויר: שני יזמים בני 20 מההכשרה",["launch","community"]],["wa-61.png","שליו חן: שנתיים וחצי של ליווי וספריית Canvix",["community"]],["wa-41.png","דוד טגניה: הזיכוי הראשון והלקוח הראשון",["first"]],["wa-87.png","עומר בלק: 9 השקלים הכי מרגשים שעשיתי בחיים",["first","money","launch"]],["wa-69.png","זהר קפלן: הכל קופי-פייסט מההכשרה",["community"]],["wa-46.png","SaaS ללימוד בגרויות עם MVP ו-40 טסטרים",["launch"]],["wa-56.png","רון מינס חוצה 1,000 ש״ח הכנסה",["money"]],["wa-44.png","ליאור כהן משיק אפליקציה חדשה",["launch"]],["wa-89.png","מ-1,000 ל-2,000 דולר בחודש, עבודה על CAC מול LTV",["money"]],["wa-63.png","BRVOO: גרסת MVP ראשונה באוויר",["first","launch"]],["wa-48.png","עדן כץ: פלאגין וידאו אוטומטי לפרימייר",["launch"]],["wa-74.png","שגב: פידבק מהורים, לא היה קורה בלי nCode",["community"]],["wa-36.png","שגב: אפליקציית כושר לילדים עם 80+ ילדים ולקוח ראשון",["first"]]]};
+
+const VIDEOS = [
+  { key: 'mashup', src: 'drive', id: '1Z-9dfI0SfMrqLk6-GEVgQ4qUZexK_l4-', name: 'סטודנטים של nCode, במילים שלהם', poster: '../images/videos/mashup.jpg', inRail: false },
+  { key: 'zohar', src: 'drive', id: '1j8GEIvbS42aEsic2ifRtFpKHi6t6xJfc', name: 'זוהר וענונו', line: 'מעורך וידאו למייסד פלטפורמת AI עם <strong>41,000$ MRR</strong> ומעל 20,000 משתמשים רשומים.', poster: '../images/videos/zohar-ben-nunu.jpg' },
+  { key: 'liran', src: 'drive', id: '1q2RRcMD8nyaIfj1S1KGLKrW7DuuBgueI', name: 'לירן שמש', line: 'עושה <strong>עשרות אלפי שקלים בחודש</strong> מאפליקציה שבנה בהכשרה.', poster: '../images/videos/liran-shemesh.jpg' },
+  { key: 'sarah', src: 'drive', id: '1x0jZlPTjB-sW19mgMWs25twtkP9orNN2', name: 'שרה פרידמן', line: 'השיקה מוצר, ובערב הראשון עשתה <strong>יותר מ-10,000 ש״ח</strong>.', poster: '../images/videos/sarah-friedman.jpg' },
+  { key: 'hodaya', src: 'drive', id: '1RpupEa-tscGNUcq3a2L-nBSVpKC2OYqv', name: 'הודיה דוד', line: 'בלי קוד ובלי אנגלית, השיקה אפליקציה עם <strong>300+ משתמשות פעילות</strong> תוך שלושה חודשים.', poster: '../images/videos/hodaya-david.jpg' },
+  { key: 'rotem', src: 'drive', id: '1cT6EyHY_pm7Xs_f6_kdeKBzUWv4dXKu7', name: 'רותם חדד', line: 'השיק את המוצר <strong>תוך חודש</strong>, ושבוע אחרי כבר הביא לקוח משלם.', poster: '../images/videos/rotem-hadad.jpg' },
+  { key: 'elazar', src: 'drive', id: '1pbjiptCpryeXUt3kg5rsL0ea5gR9LXMx', name: 'אלעזר לדרמן', line: 'מאברך בכולל למייסד SaaS לספרים ולקוסמטיקאיות. <strong>העסק גדל ומתייצב</strong>, והלידים מגיעים.', poster: '../images/videos/elazar-lederman.jpg' },
+  { key: 'tal', src: 'drive', id: '12J__YIrMMJFyW4YfAsMlg7ElnZQiJXxm', name: 'טל שייך', line: 'הגיע ל-<strong>3,000$ מהאפליקציה</strong> תוך שלושה חודשים.', poster: '../images/videos/tal-shayech.jpg' },
+  { key: 'itai', src: 'drive', id: '1217kAseth1fxY4BIgc5S3Eog9YqFri7L', name: 'איתי שיינפלד', line: 'ידע רק לדבר עם ChatGPT. חודשיים אחרי: אפליקציה למורים פרטיים, <strong>כמעט 30 משתמשים וסליקה ראשונה</strong>.', poster: '../images/videos/itai-scheinfeld.jpg' },
+];
+const YT_PLAYLIST = 'https://www.youtube.com/playlist?list=PLi-Z2lWWpDfp0SVcM1K4kkcA48cgvb25r';
+const YT_MORE = [
+  ['yx3Dz9tZ0Uw','זיו'],['iirkmG4lc6o','עמית'],['F41VAOiGGyg','טדי'],['67blAqmugzc','אופק'],['mJv6ZThJKrY','שלו'],
+  ['DuzgWu0BK1g','עידו'],['6mn0979hPKk','שיר'],['OpDztav7X5A','שגב'],['n3LStUwbMoo','מאור'],['ZfPsqYFGpjQ','תמיר'],
+  ['rGBLqBZZF2w','עידו'],['3-XAW7O9Nb0','איתי'],['PLL87bB8LO8','זוהר'],['aHz2rwKfm2o','ניר'],['tAdrtb71OPA','עומר'],['2g40tui6MCY','ניר לונדון']
+];
+
+const STRIP = [
+  ['41,000$', 'MRR · זוהר וענונו'],
+  ['600+', 'לקוחות משלמים · לירן שמש'],
+  ['10,000₪+', 'בערב ההשקה · שרה פרידמן'],
+  ['300+', 'משתמשות פעילות · הודיה דוד'],
+  ['3,000$', 'תוך 3 חודשים · טל שייך'],
+  ['300K', 'אקזיט על אפליקציה של סטודנט'],
+];
+
+const FAQ = [
+  { q: 'אין לי שום רקע בתכנות. זה באמת בשבילי?',
+    a: 'כן, ההכשרה בנויה בדיוק בשבילכם. בונים עם סוכני ה-AI החזקים בעולם, Claude Code ו-Codex, בלי לכתוב שורת קוד בעצמכם.',
+    quote: ['אני לא יודעת קוד, אני לא יודעת תוכנה, אני לא יודעת שום דבר. אפילו אנגלית אני כאילו עילגת.', 'הודיה דוד, השיקה אפליקציה עם 300+ משתמשות פעילות תוך 3 חודשים'] },
+  { q: 'זו השקעה גדולה בשבילי. מה אם זה לא יחזיר את עצמו?',
+    a: 'חשש לגיטימי, וגם הסטודנטים שבעדויות הרגישו אותו. מה שמחזיר את ההשקעה הוא לא רק השיעורים, אלא הטעויות שחוסכים: מה לבנות, איך לתמחר, איך להכניס שותפים נכון ואיך להביא לקוחות משלמים. ואת זה עושים עם ליווי אישי, לא לבד.',
+    quote: ['הוצאה כזאת לקורס ולקהילה היא הוצאה גדולה בשבילי, וחששתי שזה לא יחזיר את ההשקעה. היום אני רואה שאני יכול להכניס הרבה יותר, בזכות הידע והליווי, הרבה יותר ממה שהשקעתי.', 'אלעזר לדרמן, אברך ומייסד SaaS'] },
+  { q: 'אי אפשר פשוט ללמוד את זה ביוטיוב או לבקש מה-AI?',
+    a: 'את הקוד ה-AI כבר כותב. מה שהוא לא יודע זה מה לבנות, איך להביא לקוחות אמיתיים ואיך לגרום להם לשלם. את זה מלמדים אנשים שכבר עשו את זה, וזה החלק שרוב ההכשרה עוסקת בו: ולידציה, תמחור, השקה, שיווק וקמפיינים.',
+    quote: ['החלק של התכנות והפיתוח עם Claude או GPT זה החלק הכי קל. לדעת מה לפתח, לדעת איך למשוך אנשים אמיתיים שישלמו לכם כסף אמיתי, זה החלק שקלוד לא יודע.', 'זוהר וענונו, 41,000$ MRR'] },
+  { q: 'אין לי עדיין רעיון. זה בעיה?',
+    a: 'ממש לא. מודול 3 מוקדש בדיוק לזה: מסגרת שיטתית ליצירת רעיונות, סינון שלהם ובחירת הרעיון שהכי מתאים לכם. אחריו מגיע מודול ולידציה, כדי לוודא שיש ביקוש לפני שמתחילים לבנות.' },
+  { q: 'ומה אם אני נתקע באמצע?',
+    a: 'לא נשארים לבד. יש מפגשי 1:1 בזום עם מנטורים, קבוצות וואטסאפ פעילות ולייבים שבועיים, כך שתמיד יש למי לפנות.',
+    quote: ['הופתעתי לגלות שקיבלתי מעטפת מלאה, וגם סבלנות. תכננו זום של 45 דקות, וקלטנו את עצמנו בעשר בלילה, שלוש שעות אחרי.', 'הודיה דוד'] },
+  { q: 'כמה זמן לוקח להגיע לתוצאה?',
+    a: 'המסלול בנוי ל-90 יום, מאפס למוצר חי עם לקוחות משלמים. הקצב אישי ותלוי בכמה זמן אתם משקיעים. רותם השיק תוך חודש, והודיה השיקה ועברה 300 משתמשות פעילות תוך שלושה חודשים.' },
+  { q: 'ומה קורה אחרי שמסיימים?',
+    a: 'הקהילה ממשיכה ללוות אתכם גם אחרי ההכשרה. מודול הסיום בונה איתכם תוכנית פעולה ממוקדת לחודשים הבאים, וההרצאות הפרונטליות עם יזמים מובילים ממשיכות לאורך הדרך.' },
+];
+
+/* ---------------- helpers ---------------- */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+const PLAY = '<span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>';
+const INS = Object.fromEntries(DATA.instructors.map(i => [i.img.split('/').pop(), i]));
+
+/* ---------------- rep / whatsapp ---------------- */
+(function () {
+  const q = new URLSearchParams(location.search);
+  const key = (q.get('rep') || '').toLowerCase();
+  let rep = REPS[key] || null;
+  if (!rep && q.get('wa')) rep = { name: q.get('name') || '', phone: q.get('wa') };
+  const phone = rep && String(rep.phone || '').replace(/\D/g, '');
+  const name = rep && rep.name;
+  let href = FALLBACK_URL;
+  if (phone && phone.length >= 11) {
+    const msg = `היי${name ? ' ' + name : ''}, עברתי על הסילבוס של nCode ויש לי שאלה`;
+    href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  }
+  $$('.js-wa').forEach(a => a.href = href);
+  if (phone && name) {
+    $('.js-greet').textContent = `${name} מצוות nCode שלח לכם את זה אחרי השיחה`;
+    $$('.js-wa-short').forEach(s => s.textContent = `וואטסאפ ל${name}`);
+    $$('.js-wa-long').forEach(s => s.textContent = `יש לי שאלה ל${name}`);
+    $('.js-final-h').innerHTML = `יש שאלה?<br><span class="grad">${esc(name)} כאן בשבילכם.</span>`;
+    $('.js-final-p').textContent = 'שלחו הודעה, ונסגור את כל מה שנשאר פתוח.';
+  } else if (!phone) {
+    $$('.js-wa').forEach(a => a.querySelector('svg').remove());
+    $$('.js-wa-short').forEach(s => s.textContent = 'לאתר nCode');
+    $$('.js-wa-long').forEach(s => s.textContent = 'לאתר nCode');
+  }
+})();
+
+/* ---------------- strip ---------------- */
+(function () {
+  const html = STRIP.map(([b, s]) => `<div class="strip-item"><b class="ltr">${b}</b><span>${s}</span></div>`).join('');
+  $('.js-strip').innerHTML = html + html;
+})();
+
+/* ---------------- roadmap ---------------- */
+(function () {
+  const avs = by => {
+    const shown = by.slice(0, 3).map(f => `<img loading="lazy" src="../images/instructors/${f}" alt="">`).join('');
+    return `<span class="avs">${shown}${by.length > 3 ? `<em>+${by.length - 3}</em>` : ''}</span>`;
+  };
+  $('.js-phases').innerHTML = DATA.phases.map(p => `
+    <div class="phase rv">
+      <div>
+        <div class="phase-tag en">PHASE ${p.num}</div>
+        <h3>${esc(p.title)}</h3>
+        <p class="phase-sub">${esc(p.sub)}</p>
+      </div>
+      <div class="mods">${p.modules.map(m => `
+        <div class="mod">
+          <button class="mod-h" aria-expanded="false">
+            <span class="mod-n">${m.n}</span>
+            <span class="mod-t"><b>${esc(m.title)}</b><small>${esc(m.meta)}</small></span>
+            ${avs(m.by)}${CHEV}
+          </button>
+          <div class="mod-b"><div><div class="mod-in">
+            <div class="hook">״${esc(m.hook)}״</div>
+            <p>${esc(m.desc)}</p>
+            <div class="chips">${m.topics.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+            <div class="by">מלמדים: ${m.by.map(f => `<b>${esc((INS[f] || {}).name || '')}</b>`).join(' · ')}</div>
+          </div></div></div>
+        </div>`).join('')}
+      </div>
+    </div>`).join('');
+  const setOpen = (mod, open) => { mod.classList.toggle('open', open); $('.mod-h', mod).setAttribute('aria-expanded', open); };
+  $('.js-phases').addEventListener('click', e => {
+    const h = e.target.closest('.mod-h'); if (!h) return;
+    const mod = h.parentElement; setOpen(mod, !mod.classList.contains('open'));
+  });
+  const btn = $('.js-expand');
+  btn.addEventListener('click', () => {
+    const all = $$('.mod'); const open = !all.every(m => m.classList.contains('open'));
+    all.forEach(m => setOpen(m, open));
+    btn.textContent = open ? 'סגרו את כל המודולים' : 'פתחו את כל המודולים';
+  });
+})();
+
+/* ---------------- videos ---------------- */
+const vd = $('#vd');
+function openVideo(v) {
+  const src = v.src === 'yt'
+    ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
+    : `https://drive.google.com/file/d/${v.id}/preview`;
+  $('iframe', vd).src = src;
+  $('.js-vd-title', vd).textContent = v.name;
+  vd.showModal();
+}
+vd.addEventListener('close', () => { $('iframe', vd).src = 'about:blank'; });
+(function () {
+  const rail = $('.js-rail');
+  const cards = VIDEOS.filter(v => v.inRail !== false).map(v => `
+    <div class="vcard">
+      <button class="poster js-video" data-v="${v.key}" aria-label="נגן: ${esc(v.name)}"><img loading="lazy" src="${v.poster}" alt="">${PLAY}</button>
+      <div class="vmeta"><b>${esc(v.name)}</b><p>${v.line}</p></div>
+    </div>`);
+  YT_MORE.forEach(([id, name], i) => {
+    VIDEOS.push({ key: 'yt' + i, src: 'yt', id, name: `${name} · סטודנט nCode` });
+    cards.push(`
+    <div class="vcard">
+      <button class="poster js-video" data-v="yt${i}" aria-label="נגן: ${esc(name)}"><img loading="lazy" src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="">${PLAY}</button>
+      <div class="vmeta"><b>${esc(name)}</b><p>סטודנט nCode מספר</p></div>
+    </div>`);
+  });
+  cards.push(`<div class="vcard more"><a href="${YT_PLAYLIST}" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12a31 31 0 00.5 4.8 3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15.1V8.9L15.3 12z"/></svg><br>לכל העדויות בערוץ היוטיוב</span></a></div>`);
+  rail.innerHTML = cards.join('');
+  const step = () => (rail.querySelector('.vcard')?.offsetWidth || 320) + 18;
+  $('.js-rail-next').addEventListener('click', () => rail.scrollBy({ left: -step() }));
+  $('.js-rail-prev').addEventListener('click', () => rail.scrollBy({ left: step() }));
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.js-video'); if (!b) return;
+    const v = VIDEOS.find(x => x.key === b.dataset.v); if (v) openVideo(v);
+  });
+})();
+
+/* ---------------- whatsapp wall ---------------- */
+(function () {
+  const TAGS = [['all', 'הכל'], ['money', 'הכנסות'], ['first', 'הכסף הראשון'], ['launch', 'השקות'], ['community', 'קהילה וליווי']];
+  const PAGE = matchMedia('(max-width: 600px)').matches ? 8 : 12;
+  let tag = 'all', shown = PAGE, list = [];
+  const wall = $('.js-wall'), more = $('.js-more');
+  $('.js-wa-count').textContent = `${DATA.wa.length} הודעות אמיתיות של סטודנטים מקבוצות הקהילה. פרטים מזהים טושטשו.`;
+  $('.js-filters').innerHTML = TAGS.map(([k, l]) => {
+    const n = k === 'all' ? DATA.wa.length : DATA.wa.filter(w => w[2].includes(k)).length;
+    return `<button data-t="${k}" aria-pressed="${k === 'all'}">${l}<small>${n}</small></button>`;
+  }).join('');
+  function render() {
+    list = DATA.wa.filter(w => tag === 'all' || w[2].includes(tag));
+    wall.innerHTML = list.slice(0, shown).map(([f, cap], i) =>
+      `<button class="shot" data-i="${i}"><img loading="lazy" src="../images/testimonials/${f}" alt="${esc(cap)}"><figcaption>${esc(cap)}</figcaption></button>`).join('');
+    const left = list.length - shown;
+    more.parentElement.style.display = left > 0 ? '' : 'none';
+    more.textContent = `הציגו עוד ${Math.min(PAGE, left)}`;
+  }
+  $('.js-filters').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    tag = b.dataset.t; shown = PAGE;
+    $$('.js-filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    render();
+  });
+  more.addEventListener('click', () => { shown += PAGE; render(); });
+  render();
+
+  const lb = $('#lb'), img = $('img', lb), cap = $('.lb-cap', lb);
+  let cur = 0;
+  const show = i => { cur = (i + list.length) % list.length; img.src = `../images/testimonials/${list[cur][0]}`; img.alt = list[cur][1]; cap.textContent = list[cur][1]; };
+  wall.addEventListener('click', e => { const s = e.target.closest('.shot'); if (!s) return; show(+s.dataset.i); lb.showModal(); });
+  $('.js-lb-next', lb).addEventListener('click', () => show(cur + 1));
+  $('.js-lb-prev', lb).addEventListener('click', () => show(cur - 1));
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(cur + 1); if (e.key === 'ArrowRight') show(cur - 1); });
+  let x0 = null;
+  lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(cur + (dx > 0 ? 1 : -1)); x0 = null; });
+})();
+
+/* ---------------- team ---------------- */
+(function () {
+  const SHOW = 8;
+  $('.js-team').innerHTML = DATA.instructors.map((t, i) => `
+    <div class="tm rv${i >= SHOW ? ' hide' : ''}">
+      <div class="tm-top"><img loading="lazy" src="../${t.img}" alt=""><div><b>${esc(t.name)}</b>${t.badges.length ? `<div class="badges">${t.badges.map(x => `<span class="badge">${esc(x)}</span>`).join('')}</div>` : ''}</div></div>
+      <p>${esc(t.role)}</p>
+    </div>`).join('');
+  $('.js-team-more').addEventListener('click', e => {
+    $$('.tm.hide').forEach(t => { t.classList.remove('hide'); t.classList.add('on'); });
+    e.currentTarget.parentElement.remove();
+  });
+})();
+
+/* ---------------- faq ---------------- */
+(function () {
+  $('.js-faq').innerHTML = FAQ.map(f => `
+    <div class="qa rv">
+      <button class="qa-h" aria-expanded="false"><span>${esc(f.q)}</span>${CHEV}</button>
+      <div class="mod-b"><div><div>${esc(f.a)}${f.quote ? `<blockquote>״${esc(f.quote[0])}״<cite>${esc(f.quote[1])}</cite></blockquote>` : ''}</div></div></div>
+    </div>`).join('');
+  $('.js-faq').addEventListener('click', e => {
+    const h = e.target.closest('.qa-h'); if (!h) return;
+    const qa = h.parentElement; const open = !qa.classList.contains('open');
+    qa.classList.toggle('open', open); h.setAttribute('aria-expanded', open);
+  });
+})();
+
+/* ---------------- dialogs, reveal, sticky bar ---------------- */
+$$('dialog').forEach(d => {
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('.js-close')) d.close(); });
+});
+(function () {
+  const els = $$('.rv');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('on')); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(e => io.observe(e));
+  const bar = $('.mbar'), hero = $('.hero'), fin = $('.final');
+  let pastHero = false, atEnd = false;
+  const upd = () => bar.classList.toggle('show', pastHero && !atEnd);
+  new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; upd(); }).observe(hero);
+  new IntersectionObserver(([e]) => { atEnd = e.isIntersecting; upd(); }).observe(fin);
+})();
+</script>
+</body>
+</html>
