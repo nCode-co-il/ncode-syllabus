@@ -768,8 +768,64 @@
             color: var(--accent-cyan);
             font-weight: 700;
         }
+        .vid-lite {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            background: #000 center / cover no-repeat;
+            cursor: none;
+        }
+        .vid-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 68px;
+            height: 48px;
+            transform: translate(-50%, -50%);
+            border-radius: 14px;
+            background: rgba(0, 0, 0, 0.7);
+            transition: background 0.2s ease;
+        }
+        .vid-play::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            border-style: solid;
+            border-width: 10px 0 10px 17px;
+            border-color: transparent transparent transparent #fff;
+        }
+        .vid-lite:hover .vid-play {
+            background: #ff0033;
+        }
+        .vid-more-header {
+            text-align: center;
+            margin: 56px auto 24px;
+        }
+        .vid-more-header h4 {
+            font-size: clamp(20px, 2.4vw, 26px);
+            font-weight: 800;
+        }
+        .vid-gallery-more {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .vid-gallery-more .vid-meta {
+            padding: 10px 14px 12px;
+        }
+        .vid-gallery-more .vid-name {
+            font-size: 15px;
+        }
+        @media (max-width: 900px) {
+            .vid-gallery-more { grid-template-columns: repeat(3, 1fr); }
+        }
         @media (max-width: 760px) {
             .vid-gallery { grid-template-columns: 1fr; }
+            .vid-gallery-more { grid-template-columns: repeat(2, 1fr); }
         }
 
         /* Journey container */
@@ -1907,6 +1963,15 @@
         }
 
     </style>
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_uFXE44mfxyHxKo95jvX82YCaikApA8ZUZYnMwwZCQ8pg', {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2026-05-30',
+            person_profiles: 'identified_only'
+        })
+        posthog.register({ site: 'ncode-syllabus' })
+    </script>
 </head>
 <body>
 
@@ -2960,12 +3025,12 @@
 
         <div class="vid-gallery-header reveal">
             <h3>הם מספרים את זה בעצמם.</h3>
-            <p>עשרה סטודנטים, עשר נקודות פתיחה שונות — ותוצאה אמיתית בכל אחת</p>
+            <p>עשרות סטודנטים, נקודות פתיחה שונות — ותוצאה אמיתית בכל אחת</p>
         </div>
         <div class="vid-gallery">
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/5ldUBETEtA8?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — שרה פרידמן"></iframe>
+                    <button type="button" class="vid-lite" data-yt="5ldUBETEtA8" data-name="שרה פרידמן" aria-label="נגן עדות — שרה פרידמן" style="background-image:url('https://i.ytimg.com/vi/5ldUBETEtA8/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">שרה פרידמן</div>
@@ -2974,7 +3039,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/sDN4ZZSCNMM?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — טל שייך"></iframe>
+                    <button type="button" class="vid-lite" data-yt="sDN4ZZSCNMM" data-name="טל שייך" aria-label="נגן עדות — טל שייך" style="background-image:url('https://i.ytimg.com/vi/sDN4ZZSCNMM/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">טל שייך</div>
@@ -2983,7 +3048,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Lk2gN1vHJxU?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — זוהר וענונו"></iframe>
+                    <button type="button" class="vid-lite" data-yt="Lk2gN1vHJxU" data-name="זוהר וענונו" aria-label="נגן עדות — זוהר וענונו" style="background-image:url('https://i.ytimg.com/vi/Lk2gN1vHJxU/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">זוהר וענונו</div>
@@ -2992,7 +3057,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/yQCFOHv6TkU?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — הודיה דוד"></iframe>
+                    <button type="button" class="vid-lite" data-yt="yQCFOHv6TkU" data-name="הודיה דוד" aria-label="נגן עדות — הודיה דוד" style="background-image:url('https://i.ytimg.com/vi/yQCFOHv6TkU/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">הודיה דוד</div>
@@ -3001,25 +3066,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://drive.google.com/file/d/1q2RRcMD8nyaIfj1S1KGLKrW7DuuBgueI/preview" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — לירן שמש"></iframe>
-                </div>
-                <div class="vid-meta">
-                    <div class="vid-name">לירן שמש</div>
-                    <div class="vid-result">עושה <strong>עשרות אלפי שקלים בחודש</strong> מאפליקציה שבנה בהכשרה.</div>
-                </div>
-            </div>
-            <div class="vid-card reveal">
-                <div class="vid-frame">
-                    <iframe loading="lazy" src="https://drive.google.com/file/d/1cT6EyHY_pm7Xs_f6_kdeKBzUWv4dXKu7/preview" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — רותם חדד"></iframe>
-                </div>
-                <div class="vid-meta">
-                    <div class="vid-name">רותם חדד</div>
-                    <div class="vid-result">השיק את המוצר <strong>תוך חודש</strong> — ושבוע אחרי כבר הביא לקוח משלם.</div>
-                </div>
-            </div>
-            <div class="vid-card reveal">
-                <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/FAtFxAxvknk?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — איתי שיינפלד"></iframe>
+                    <button type="button" class="vid-lite" data-yt="FAtFxAxvknk" data-name="איתי שיינפלד" aria-label="נגן עדות — איתי שיינפלד" style="background-image:url('https://i.ytimg.com/vi/FAtFxAxvknk/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">איתי שיינפלד</div>
@@ -3028,7 +3075,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/FQWetCqL1k4?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — הילה ספיאן"></iframe>
+                    <button type="button" class="vid-lite" data-yt="FQWetCqL1k4" data-name="הילה ספיאן" aria-label="נגן עדות — הילה ספיאן" style="background-image:url('https://i.ytimg.com/vi/FQWetCqL1k4/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">הילה ספיאן</div>
@@ -3037,7 +3084,7 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/JclYjHtHDyM?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — אביה רוזנהיים"></iframe>
+                    <button type="button" class="vid-lite" data-yt="JclYjHtHDyM" data-name="אביה רוזנהיים" aria-label="נגן עדות — אביה רוזנהיים" style="background-image:url('https://i.ytimg.com/vi/JclYjHtHDyM/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">אביה רוזנהיים</div>
@@ -3046,11 +3093,145 @@
             </div>
             <div class="vid-card reveal">
                 <div class="vid-frame">
-                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/7ssAFYVc7eE?rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="עדות וידאו — אלעזר לדרמן"></iframe>
+                    <button type="button" class="vid-lite" data-yt="7ssAFYVc7eE" data-name="אלעזר לדרמן" aria-label="נגן עדות — אלעזר לדרמן" style="background-image:url('https://i.ytimg.com/vi/7ssAFYVc7eE/hqdefault.jpg')"><span class="vid-play"></span></button>
                 </div>
                 <div class="vid-meta">
                     <div class="vid-name">אלעזר לדרמן</div>
                     <div class="vid-result">היה אברך בכולל — היום עובד עם <strong>ספרים וקוסמטיקאית גדולה</strong>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vid-more-header reveal">
+            <h4>עוד סטודנטים מספרים</h4>
+        </div>
+        <div class="vid-gallery vid-gallery-more">
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="yx3Dz9tZ0Uw" data-name="זיו" aria-label="נגן עדות — זיו" style="background-image:url('https://i.ytimg.com/vi/yx3Dz9tZ0Uw/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">זיו</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="iirkmG4lc6o" data-name="עמית" aria-label="נגן עדות — עמית" style="background-image:url('https://i.ytimg.com/vi/iirkmG4lc6o/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">עמית</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="F41VAOiGGyg" data-name="טדי" aria-label="נגן עדות — טדי" style="background-image:url('https://i.ytimg.com/vi/F41VAOiGGyg/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">טדי</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="67blAqmugzc" data-name="אופק" aria-label="נגן עדות — אופק" style="background-image:url('https://i.ytimg.com/vi/67blAqmugzc/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">אופק</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="mJv6ZThJKrY" data-name="שלו" aria-label="נגן עדות — שלו" style="background-image:url('https://i.ytimg.com/vi/mJv6ZThJKrY/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">שלו</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="DuzgWu0BK1g" data-name="עידו" aria-label="נגן עדות — עידו" style="background-image:url('https://i.ytimg.com/vi/DuzgWu0BK1g/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">עידו</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="6mn0979hPKk" data-name="שיר" aria-label="נגן עדות — שיר" style="background-image:url('https://i.ytimg.com/vi/6mn0979hPKk/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">שיר</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="OpDztav7X5A" data-name="שגב" aria-label="נגן עדות — שגב" style="background-image:url('https://i.ytimg.com/vi/OpDztav7X5A/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">שגב</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="n3LStUwbMoo" data-name="מאור" aria-label="נגן עדות — מאור" style="background-image:url('https://i.ytimg.com/vi/n3LStUwbMoo/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">מאור</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="ZfPsqYFGpjQ" data-name="תמיר" aria-label="נגן עדות — תמיר" style="background-image:url('https://i.ytimg.com/vi/ZfPsqYFGpjQ/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">תמיר</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="rGBLqBZZF2w" data-name="עידו" aria-label="נגן עדות — עידו" style="background-image:url('https://i.ytimg.com/vi/rGBLqBZZF2w/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">עידו</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="3-XAW7O9Nb0" data-name="איתי" aria-label="נגן עדות — איתי" style="background-image:url('https://i.ytimg.com/vi/3-XAW7O9Nb0/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">איתי</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="PLL87bB8LO8" data-name="זוהר" aria-label="נגן עדות — זוהר" style="background-image:url('https://i.ytimg.com/vi/PLL87bB8LO8/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">זוהר</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="aHz2rwKfm2o" data-name="ניר" aria-label="נגן עדות — ניר" style="background-image:url('https://i.ytimg.com/vi/aHz2rwKfm2o/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">ניר</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="tAdrtb71OPA" data-name="עומר" aria-label="נגן עדות — עומר" style="background-image:url('https://i.ytimg.com/vi/tAdrtb71OPA/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">עומר</div>
+                </div>
+            </div>
+            <div class="vid-card reveal">
+                <div class="vid-frame">
+                    <button type="button" class="vid-lite" data-yt="2g40tui6MCY" data-name="ניר לונדון" aria-label="נגן עדות — ניר לונדון" style="background-image:url('https://i.ytimg.com/vi/2g40tui6MCY/hqdefault.jpg')"><span class="vid-play"></span></button>
+                </div>
+                <div class="vid-meta">
+                    <div class="vid-name">ניר לונדון</div>
                 </div>
             </div>
         </div>
@@ -3251,6 +3432,20 @@
 </footer>
 
 <script>
+    // ==================== VIDEO TESTIMONIALS ====================
+    // Each card shows a thumbnail; the YouTube player loads only when clicked.
+    document.querySelectorAll('.vid-lite').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
+            iframe.title = `עדות וידאו — ${btn.dataset.name}`;
+            iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
+            iframe.allowFullscreen = true;
+            btn.replaceWith(iframe);
+            posthog.capture('testimonial_video_play', { student: btn.dataset.name, video_id: btn.dataset.yt });
+        });
+    });
+
     // ==================== CUSTOM CURSOR ====================
     const cursorDot = document.getElementById('cursorDot');
     const cursorRing = document.getElementById('cursorRing');
