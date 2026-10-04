@@ -2012,7 +2012,7 @@
             מ-0 לרעיון, לפיתוח ולמוצר חי — ומהדולר הראשון בדרך למיליון. גם בלי רקע בתכנות.
         </p>
         <div class="hero-video">
-            <iframe src="https://www.youtube-nocookie.com/embed/FTV59Yt2xP8?playsinline=1&rel=0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="מאשאפ עדויות nCode"></iframe>
+            <div id="heroPlayer" data-yt="FTV59Yt2xP8"></div>
         </div>
         <a href="#roadmap" class="hero-cta">
             גלה את המסלול המלא
@@ -3433,17 +3433,52 @@
 </footer>
 
 <script>
-    // ==================== VIDEO TESTIMONIALS ====================
-    // Each card shows a thumbnail; the YouTube player loads only when clicked.
+    // ==================== VIDEOS (YouTube) ====================
+    // Players go through the YouTube API so they always play with sound:
+    // the player can remember a muted state, so it is unmuted on start.
+    const ytApi = new Promise((resolve) => {
+        window.onYouTubeIframeAPIReady = resolve;
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+    });
+
+    function mountPlayer(el, videoId, name, autoplay) {
+        let tracked = false;
+        return ytApi.then(() => new YT.Player(el, {
+            host: 'https://www.youtube-nocookie.com',
+            videoId,
+            playerVars: { autoplay: autoplay ? 1 : 0, playsinline: 1, rel: 0 },
+            events: {
+                onReady: (e) => {
+                    e.target.unMute();
+                    e.target.setVolume(100);
+                    if (autoplay) e.target.playVideo();
+                },
+                onStateChange: (e) => {
+                    if (e.data !== YT.PlayerState.PLAYING) return;
+                    if (e.target.isMuted()) {
+                        e.target.unMute();
+                        e.target.setVolume(100);
+                    }
+                    if (!tracked) {
+                        tracked = true;
+                        posthog.capture('testimonial_video_play', { student: name, video_id: videoId });
+                    }
+                }
+            }
+        }));
+    }
+
+    const heroPlayer = document.getElementById('heroPlayer');
+    mountPlayer(heroPlayer, heroPlayer.dataset.yt, 'מאשאפ', false);
+
+    // Gallery cards show a thumbnail; the player loads only when clicked.
     document.querySelectorAll('.vid-lite').forEach((btn) => {
         btn.addEventListener('click', () => {
-            const iframe = document.createElement('iframe');
-            iframe.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
-            iframe.title = `עדות וידאו — ${btn.dataset.name}`;
-            iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
-            iframe.allowFullscreen = true;
-            btn.replaceWith(iframe);
-            posthog.capture('testimonial_video_play', { student: btn.dataset.name, video_id: btn.dataset.yt });
+            const slot = document.createElement('div');
+            btn.replaceWith(slot);
+            mountPlayer(slot, btn.dataset.yt, btn.dataset.name, true);
         });
     });
 
